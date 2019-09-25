@@ -934,7 +934,7 @@ function reducer() {
 
 
 var store = (0, _redux.createStore)(reducer); // 6) render 라는 함수 만들기.
-// 상태가 업데이트될 때마다 호출(상태가 바뀔때마다.) 
+// 상태가 업데이트될 때마다 호출(상태가 바뀔때마다.)
 //  & 만들어진 UI의 속성을 상태에 따라 변경해준다.
 
 var render = function render() {
@@ -998,7 +998,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50688" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50965" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
