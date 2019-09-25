@@ -29,7 +29,7 @@ const initialState = {
 // 4) 리듀서 (= 변화를 일으키는 함수.!)
 //    함수의 파라미터로 state 와 action 값을 받는다.
 //    state 가 undefined 일 때는 initialState 를 기본값으로 사용.
-function reeducer(state = initialState, action) {
+function reducer(state = initialState, action) {
   //action.type 에 따라 다른 작업 처리.
   switch (action.type) {
       case TOGGLE_SWITCH:

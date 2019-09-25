@@ -905,7 +905,7 @@ var initialState = {
 //    함수의 파라미터로 state 와 action 값을 받는다.
 //    state 가 undefined 일 때는 initialState 를 기본값으로 사용.
 
-function reeducer() {
+function reducer() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
   var action = arguments.length > 1 ? arguments[1] : undefined;
 
@@ -998,7 +998,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50521" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50688" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
