@@ -78,3 +78,17 @@ render();
 //    상태가 업데이트(바뀔때마다)될때 마다 render 함수를 호출.
 //    [ subscribe 파라미터로는 함수 형태의 값을 전달, 전달된 함수는 액션이 발생하여 상태가 업데이트 될때 마다 호출 ]
 store.subscribe(render);
+
+
+// 10) 액션 발생시키기 (dispatch)
+//     스토어의 내장함수 dispatch를 사용, 파라미터는 액션 객체를 넣어주기.
+//     이벤트 함수 내부에 dispatch 함수를 사용해서 액션을 스토어에게 전달하는 내용.
+divToggle.onClick = () => {
+  store.dispatch(toggleSwithc());
+}
+btnIncrease.onClick = () => {
+  store.dispatch(increase(1));
+}
+btnDecrease.onClick = () => {
+  store.dispatch(decrease());
+}
