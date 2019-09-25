@@ -1,5 +1,7 @@
-const divToggle = document.querySelector('.toggle');
+import { createStore } from 'redux';
+
 // 0) 수정할 DOM 노드를 가리키는 값을 선언.
+const divToggle = document.querySelector('.toggle');
 const counter = document.querySelector('h1');
 const btnIncrease = document.querySelector('#increase');
 const btnDecrease = document.querySelector('#decrease');
@@ -49,3 +51,6 @@ function reeducer(state = initialState, action) {
         return state;
   }
 }
+
+// 5) 스토어 만들기
+const store = createStore(reducer);
