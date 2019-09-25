@@ -14,5 +14,12 @@ const toggleSwitch = () => ({ type: TOGGLE_SWITCH });
 const increase = difference => ({ type: INCREASE, difference });
 const decrease = () => ({ type: DECREASE });
 // 2) 액션 생성 함수 작성.
-//     액션 객체는 반드시.!! type 값을 가지고 있어야 한다.
+//     액션 객체는 *반드시.!! type 값을 가지고 있어야 한다.*
 //     그 외에는 상태 업데이트할 때 필요한 값만 마음대로 넣기.
+
+const initialState = {
+  toggle: false,
+  counter: 0 
+};
+// 3) 초기 값 설정.
+//    초기 값 형태는 자유 (문자or숫자or문자열or객체)
