@@ -56,19 +56,25 @@ function reeducer(state = initialState, action) {
 const store = createStore(reducer);
 
 // 6) render 라는 함수 만들기.
-// 상태가 업데이트될 때마다 호출 & 만들어진 UI의 속성을 상태에 따라 변경해준다.
+// 상태가 업데이트될 때마다 호출(상태가 바뀔때마다.) 
+//  & 만들어진 UI의 속성을 상태에 따라 변경해준다.
 const render = () => {
   const state = store.getState();                  // 현재 상태를 불러온다.
 
-  // 토글 처리.
+  // 7) 토글 처리.
   if (state.toggle) {
     divToggle.classList.add('active');
   } else {
     divToggle.classList.remove('active');
   }
 
-  // 카운터 처리.
+  // 8) 카운터 처리.
   counter.innerText =state.counter;
 };
 
 render();
+
+// 9) 구독하기 (subscribe)
+//    상태가 업데이트(바뀔때마다)될때 마다 render 함수를 호출.
+//    [ subscribe 파라미터로는 함수 형태의 값을 전달, 전달된 함수는 액션이 발생하여 상태가 업데이트 될때 마다 호출 ]
+store.subscribe(render);
