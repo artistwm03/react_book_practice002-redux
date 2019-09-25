@@ -54,3 +54,21 @@ function reeducer(state = initialState, action) {
 
 // 5) 스토어 만들기
 const store = createStore(reducer);
+
+// 6) render 라는 함수 만들기.
+// 상태가 업데이트될 때마다 호출 & 만들어진 UI의 속성을 상태에 따라 변경해준다.
+const render = () => {
+  const state = store.getState();                  // 현재 상태를 불러온다.
+
+  // 토글 처리.
+  if (state.toggle) {
+    divToggle.classList.add('active');
+  } else {
+    divToggle.classList.remove('active');
+  }
+
+  // 카운터 처리.
+  counter.innerText =state.counter;
+};
+
+render();
